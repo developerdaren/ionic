@@ -1,43 +1,58 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      WELCOME
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-menu contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title>categoria</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="">UI Components</a></p>
-  </div>
-  <ion-card>
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
-    </ion-card-content>
-  </ion-card>
-</ion-content>
+  <ion-content class="ion-padding">
+    <div class="container-categoria">
+      <div class="categoria" (click)="goToArticle(false)">
+        <div class="container-name-icon">
+          <div>
+            <img
+              src="assets/icon/mujer.svg"
+              alt="Icono"
+              width="24"
+              height="24"
+            />
+          </div>
+          <div>Mujeres</div>
+        </div>
+        <div><ion-icon name="chevron-forward"></ion-icon></div>
+      </div>
+      <div class="categoria hombre" (click)="goToArticle(true)">
+        <div class="container-name-icon">
+          <div>
+            <img
+              src="assets/icon/hombre.svg"
+              alt="Icono"
+              width="24"
+              height="24"
+            />
+          </div>
+          <div>Hombre</div>
+        </div>
+        <div><ion-icon name="chevron-forward"></ion-icon></div>
+      </div>
+      <div><span></span></div></div
+  ></ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title></ion-title>
+      <ion-buttons slot="end">
+        <div class="carrito-container">
+          <ion-icon name="cart" class="carro"></ion-icon>
+          <div class="carrito-badge">2</div>
+        </div>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content  >
+    <app-articulo  [genero]="showArticle"></app-articulo>
+  </ion-content>
+</div>

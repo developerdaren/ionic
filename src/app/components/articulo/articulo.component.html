@@ -1,0 +1,57 @@
+<ion-content class="ion-padding">
+  <div class="container-grid"  *ngIf="!genero" >
+    <div class="container-articulo" *ngFor="let articulo of   articliWomen">
+      <div class="container-img">
+        <img
+          [src]="articulo?.imagen"
+        />
+      </div>
+      <div class="descrption">
+        <div>Talla</div>
+        <div class="container-slider">
+          <div class="slider" *ngFor="let talla of articulo?.tallas">
+            <span>{{ talla }}</span>
+          </div>
+        </div>
+        <div class="container-name-precio">
+          <div class="name">
+            <div>{{articulo?.name}}</div>
+            <div>{{articulo?.genero}}</div>
+          </div>
+          <div class="precio">${{articulo?.precio}}</div>
+        </div>
+        <div class="container-button">
+          <button><ion-icon name="bag-add"></ion-icon>Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-grid"  *ngIf="genero" >
+    <div class="container-articulo" *ngFor="let articulo of    articlimen ">
+      <div class="container-img">
+        <img
+          [src]="articulo?.imagen"
+        />
+      </div>
+      <div class="descrption">
+        <div>Talla</div>
+        <div class="container-slider">
+          <div class="slider" *ngFor="let talla of articulo?.tallas">
+            <span>{{ talla }}</span>
+          </div>
+        </div>
+        <div class="container-name-precio">
+          <div class="name">
+            <div>{{articulo?.name}}</div>
+            <div>{{articulo?.genero}}</div>
+          </div>
+          <div class="precio">${{articulo?.precio}}</div>
+        </div>
+        <div class="container-button">
+          <button><ion-icon name="bag-add"></ion-icon>Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

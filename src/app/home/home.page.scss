@@ -1,27 +1,57 @@
-#container {
-  text-align: center;
+ion-header {
+  --ion-toolbar-background: #FFFFFF;
+  --ion-toolbar-color: #0c0b0b;
+}
 
+.container-categoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .categoria {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #fff;
+
+    .container-name-icon {
+      display: flex;
+      align-items: center;
+      color: #0c0b0b;
+    }
+
+    ion-icon {
+      font-size: 25px;
+      color: #0c0b0b;
+    }
+  }
+}
+
+ion-buttons {
+  .carro {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+}
+
+.carrito-badge {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: -2px;
+  right: 2px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
